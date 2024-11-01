@@ -35,7 +35,7 @@ npm install @ttab/eslint-config-elephant --save-dev
 ## Configuration
 ```js
 // eslint.config.js
-import elephant from '@ttan/eslint-config-elephant'
+import elephant from '@ttab/eslint-config-elephant'
 
 export default [
     ...elephant,
