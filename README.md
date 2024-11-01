@@ -1,6 +1,6 @@
 # @ttab/eslint-config-elephant
 
-Do you even lint bro? This will help you lint your code. One config to rule them all. Especially for 
+Do you even lint bro? This will help you lint your code. One config to rule them all. Especially for everything elephant related.
 New fresh [eslint](https://eslint.org) 9 flat config for static code analysis and enforcement of code conventions and best practices.
 
 Style and formatting is provided by [@stylistic](https://eslint.style/) 
