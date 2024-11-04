@@ -71,10 +71,11 @@ export default tseslint.config(
       ],
 
       // These should be enabled as they add great value
-      '@typescript-eslint/no-unsafe-return': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
+      // Only level warn for now
+      '@typescript-eslint/no-unsafe-return': 'warn',
+      '@typescript-eslint/no-unsafe-call': 'warn',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+      '@typescript-eslint/no-unsafe-assignment': 'warn',
 
       // Disable prop-types rule as we're using TypeScript
       'react/prop-types': 'off',
