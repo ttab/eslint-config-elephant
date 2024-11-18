@@ -78,7 +78,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-assignment': 'warn',
 
       // Disable prop-types rule as we're using TypeScript
-      'react/prop-types': 'off',
+      'react/prop-types': 'off'
     }
   },
   {
