@@ -1,6 +1,6 @@
 {
   "name": "@ttab/eslint-config-elephant",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Eslint shareable configuration suitable for elephants",
   "main": "index.js",
   "type": "module",
