@@ -79,7 +79,7 @@ export default tseslint.config(
 
       // Disable prop-types rule as we're using TypeScript
       'react/prop-types': 'off',
-  '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error'
     }
   },
   {
