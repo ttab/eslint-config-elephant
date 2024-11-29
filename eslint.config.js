@@ -4,6 +4,7 @@ import reactPlugin from 'eslint-plugin-react'
 import jestPlugin from 'eslint-plugin-jest'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import stylistic from '@stylistic/eslint-plugin'
+import tailwind from 'eslint-plugin-tailwindcss'
 
 export default tseslint.config(
   {
@@ -22,6 +23,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   reactPlugin.configs.flat.recommended,
   ...tseslint.configs.recommendedTypeChecked,
+  ...tailwind.configs['flat/recommended'],
 
   stylistic.configs.customize({
     indent: 2,
