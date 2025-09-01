@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/ttab/eslint-config-elephant#readme",
   "peerDependencies": {
-    "eslint": "^9.21.0"
+    "eslint": "^9.34.0"
   },
   "devDependencies": {
-    "eslint": "^9.21.0"
+    "eslint": "^9.34.0"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.2.3",
