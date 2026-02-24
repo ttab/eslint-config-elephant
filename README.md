@@ -91,6 +91,7 @@ This release includes workarounds for plugins that have not yet published ESLint
 When `eslint-plugin-react` publishes a version that supports ESLint 10:
 - `reactVersion` can be made optional again with `'detect'` as the default
 - The `--legacy-peer-deps` workaround can be dropped
+- Remove `--legacy-peer-deps` from the CI workflow (`.github/workflows/ci.yml`)
 
 When `eslint-plugin-react-hooks` publishes a stable ESLint 10-compatible release:
 - Replace the canary pin with a stable version range
