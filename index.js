@@ -4,7 +4,7 @@ import reactPlugin from 'eslint-plugin-react'
 import jestPlugin from 'eslint-plugin-jest'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import stylistic from '@stylistic/eslint-plugin'
-import i18next from 'eslint-plugin-i18next';
+import i18next from 'eslint-plugin-i18next'
 
 export default tseslint.config(
   {
