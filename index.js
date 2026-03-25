@@ -59,10 +59,10 @@ export default tseslint.config(
         words: {
           exclude: [
             '[0-9!-/:-@[-`{-~]+', // default: ascii special chars and numbers
-            '[A-Z_-]+',            // default: ALL_CAPS identifiers
-            /^\p{Emoji}+$/u,       // default: emojis
-            /^\p{S}+$/u,           // unicode symbols (⋮, →, etc.)
-            /^.$/u                 // any single character (x, ·, etc.)
+            '[A-Z_-]+', // default: ALL_CAPS identifiers
+            /^\p{Emoji}+$/u, // default: emojis
+            /^\p{S}+$/u, // unicode symbols (⋮, →, etc.)
+            /^.$/u // any single character (x, ·, etc.)
           ]
         }
       }],
