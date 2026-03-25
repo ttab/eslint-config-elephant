@@ -53,7 +53,19 @@ export default tseslint.config(
       '@stylistic/comma-dangle': ['error', 'never'],
       '@stylistic/jsx-quotes': ['error', 'prefer-single'],
       'react/react-in-jsx-scope': 'off',
-      'i18next/no-literal-string': 'error',
+      'i18next/no-literal-string': ['error', {
+        mode: 'jsx-text-only',
+        framework: 'react',
+        words: {
+          exclude: [
+            '[0-9!-/:-@[-`{-~]+', // default: ascii special chars and numbers
+            '[A-Z_-]+',            // default: ALL_CAPS identifiers
+            /^\p{Emoji}+$/u,       // default: emojis
+            /^\p{S}+$/u,           // unicode symbols (⋮, →, etc.)
+            /^.$/u                 // any single character (x, ·, etc.)
+          ]
+        }
+      }],
       '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
         maxEOF: 1
@@ -82,6 +94,13 @@ export default tseslint.config(
       // Disable prop-types rule as we're using TypeScript
       'react/prop-types': 'off',
       '@typescript-eslint/consistent-type-imports': 'error'
+    }
+  },
+  {
+    // disable i18n linting in test files
+    files: ['**/__tests__/**'],
+    rules: {
+      'i18next/no-literal-string': 'off'
     }
   },
   {
