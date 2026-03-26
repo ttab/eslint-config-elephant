@@ -56,15 +56,6 @@ export default tseslint.config(
       'i18next/no-literal-string': ['error', {
         mode: 'jsx-text-only',
         framework: 'react',
-        words: {
-          exclude: [
-            '[0-9!-/:-@[-`{-~]+', // default: ascii special chars and numbers
-            '[A-Z_-]+', // default: ALL_CAPS identifiers
-            /^\p{Emoji}+$/u, // default: emojis
-            /^\p{S}+$/u, // unicode symbols (⋮, →, etc.)
-            /^.$/u // any single character (x, ·, etc.)
-          ]
-        }
       }],
       '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
