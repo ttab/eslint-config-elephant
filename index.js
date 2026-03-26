@@ -4,6 +4,7 @@ import reactPlugin from 'eslint-plugin-react'
 import jestPlugin from 'eslint-plugin-jest'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import stylistic from '@stylistic/eslint-plugin'
+import i18next from 'eslint-plugin-i18next'
 
 export default tseslint.config(
   {
@@ -22,6 +23,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   reactPlugin.configs.flat.recommended,
   ...tseslint.configs.recommendedTypeChecked,
+  i18next.configs['flat/recommended'],
 
   stylistic.configs.customize({
     indent: 2,
@@ -51,7 +53,17 @@ export default tseslint.config(
       '@stylistic/comma-dangle': ['error', 'never'],
       '@stylistic/jsx-quotes': ['error', 'prefer-single'],
       'react/react-in-jsx-scope': 'off',
-
+      'i18next/no-literal-string': ['error', {
+        mode: 'jsx-text-only',
+        framework: 'react',
+        words: {
+          exclude: [
+            '[0-9!-/:-@\\[-`{-~]+', // ascii special chars and numbers
+            /^\p{S}+$/u, // unicode symbols (⋮, →, etc.)
+            /^.$/u // single characters
+          ]
+        }
+      }],
       '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
         maxEOF: 1
@@ -80,6 +92,13 @@ export default tseslint.config(
       // Disable prop-types rule as we're using TypeScript
       'react/prop-types': 'off',
       '@typescript-eslint/consistent-type-imports': 'error'
+    }
+  },
+  {
+    // disable i18n linting in test files
+    files: ['**/__tests__/**'],
+    rules: {
+      'i18next/no-literal-string': 'off'
     }
   },
   {
