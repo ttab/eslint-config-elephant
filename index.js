@@ -55,7 +55,7 @@ export default tseslint.config(
       'react/react-in-jsx-scope': 'off',
       'i18next/no-literal-string': ['error', {
         mode: 'jsx-text-only',
-        framework: 'react',
+        framework: 'react'
       }],
       '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
