@@ -55,7 +55,14 @@ export default tseslint.config(
       'react/react-in-jsx-scope': 'off',
       'i18next/no-literal-string': ['error', {
         mode: 'jsx-text-only',
-        framework: 'react'
+        framework: 'react',
+        words: {
+          exclude: [
+            '[0-9!-/:-@\\[-`{-~]+', // ascii special chars and numbers
+            /^\p{S}+$/u, // unicode symbols (⋮, →, etc.)
+            /^.$/u // single characters
+          ]
+        }
       }],
       '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
