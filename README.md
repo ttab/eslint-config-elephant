@@ -1,5 +1,11 @@
 # @ttab/eslint-config-elephant
 
+> [!WARNING]
+> **This repository is archived and no longer maintained.**
+> It is read-only: no further releases, bug fixes, or dependency updates will be
+> published here. Existing installs of `@ttab/eslint-config-elephant` keep
+> working, but you should not rely on this package for new projects.
+
 Do you even lint bro? This will help you lint your code. 
 
 One config to rule them all. Especially for everything elephant related.
